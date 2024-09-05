@@ -61,6 +61,7 @@ public class ForecastFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        /*
         LinearLayout li = new LinearLayout(getContext());
         li.setBackgroundColor(0x2000FFFF);
         li.setOrientation(LinearLayout.VERTICAL);
@@ -75,6 +76,9 @@ public class ForecastFragment extends Fragment {
         li.addView(imageView);
 
         return li;
+         */
+        View v = inflater.inflate(R.layout.fragment_forecast, container, false);
+        return v;
     }
 
 }
