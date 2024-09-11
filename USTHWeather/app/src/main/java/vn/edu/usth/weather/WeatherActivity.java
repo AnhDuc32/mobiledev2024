@@ -2,6 +2,7 @@ package vn.edu.usth.weather;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,20 +11,16 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.ViewPager;
 
 public class WeatherActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather); // Set your layout here
-        // Create a new WeatherFragment
-        WeatherFragment weatherFragment = new WeatherFragment();
-        // Add the WeatherFragment
-        getSupportFragmentManager().beginTransaction().add(R.id.main, weatherFragment).commit();
-        // Create a new ForecastFragment to be placed in the activity
-        ForecastFragment forecastFragment = new ForecastFragment();
-        // Add the ForecastFragment to the 'container' FrameLayout
-        getSupportFragmentManager().beginTransaction().add(R.id.main, forecastFragment).commit();
+        HomePagerAdapter adapter = new HomePagerAdapter(getSupportFragmentManager());
+        ViewPager viewPager = findViewById(R.id.viewPager);
+        viewPager.setAdapter(adapter);
         Log.i("MyApp", "onCreate called"); // Log a message
     }
     @Override

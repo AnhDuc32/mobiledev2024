@@ -8,17 +8,9 @@
     tools:context=".WeatherActivity"
     android:orientation="vertical">
 
-    <fragment
-        android:id="@+id/weatherFragment"
-        android:name="vn.edu.usth.weather.WeatherFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="20dp"/>
-    <fragment
-        android:id="@+id/forecastFragment"
-        android:name="vn.edu.usth.weather.ForecastFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp" />
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewPager" />
+
 </LinearLayout>
