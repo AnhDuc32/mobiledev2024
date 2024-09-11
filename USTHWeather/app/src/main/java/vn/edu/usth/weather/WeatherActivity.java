@@ -13,14 +13,21 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
+import com.google.android.material.tabs.TabLayout;
+
 public class WeatherActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather); // Set your layout here
+        // Create Adapter
         HomePagerAdapter adapter = new HomePagerAdapter(getSupportFragmentManager());
+        // Create and set ViewPager
         ViewPager viewPager = findViewById(R.id.viewPager);
         viewPager.setAdapter(adapter);
+        // Create and set TabLayout
+        TabLayout tabLayout = findViewById(R.id.tabLayout);
+        tabLayout.setupWithViewPager(viewPager);
         Log.i("MyApp", "onCreate called"); // Log a message
     }
     @Override

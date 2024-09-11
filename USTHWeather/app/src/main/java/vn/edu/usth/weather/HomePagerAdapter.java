@@ -27,4 +27,21 @@ public class HomePagerAdapter extends FragmentPagerAdapter {
     public int getCount() {
         return 3; // Number of pages for a ViewPager
     }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        String title = "";
+        switch (position) {
+            case 0:
+                title = "HANOI, VIETNAM";
+                break;
+            case 1:
+                title = "HANOI, HCM City";
+                break;
+            case 2:
+                title = "PARIS, FRANCE";
+                break;
+        }
+        return title;
+    }
 }
