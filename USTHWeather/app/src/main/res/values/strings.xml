@@ -1,5 +1,25 @@
 <resources>
+    // App name
     <string name="app_name">USTH Weather</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    // ForecastFragment values
+    <string name="days">Mon\nTue\nWed\nThu\nFri\nSat\nSun\nMon\nTue\nWed</string>
+    <string name="mon">Partly Cloudy\n24C - 31C</string>
+    <string name="tue">Showers\n24C - 20C</string>
+    <string name="wed">Rain\n22C - 23C</string>
+    <string name="thu">Scattered Showers\n22C - 27C</string>
+    <string name="fri">Mostly Cloudy\n22C - 20C</string>
+    <string name="sat">Partly Cloudy\n24C - 31C</string>
+    <string name="sun">Thunderstorms\n25C - 28C</string>
+    <string name="mon2">Scattered Thunderstorms\n24C - 27C</string>
+    <string name="tue2">Showers\n24C - 26C</string>
+    <string name="wed2">Scattered Thunderstorms\n23C - 27C</string>
+
+    // WeatherFragment values
+    <string name="sunny">31C\nSunny</string>
+    <string name="hanoi">Hanoi</string>
+    <string name="showers">26C\nShowers</string>
+    <string name="HCM">HCM City</string>
+    <string name="cloudy">12C\nCloudy</string>
+    <string name="paris">Paris</string>
 </resources>

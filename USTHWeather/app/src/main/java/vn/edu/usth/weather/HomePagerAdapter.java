@@ -36,7 +36,7 @@ public class HomePagerAdapter extends FragmentPagerAdapter {
                 title = "HANOI, VIETNAM";
                 break;
             case 1:
-                title = "HANOI, HCM City";
+                title = "HCM City, VIETNAM";
                 break;
             case 2:
                 title = "PARIS, FRANCE";

@@ -19,7 +19,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mon\nTue\nWed\nThu\nFri\nSat\nSun\nMon\nTue\nWed"
+                android:text="@string/days"
                 android:textSize="20sp"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="20dp"
@@ -89,12 +89,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginLeft="20dp" >
+            android:layout_marginStart="20dp" >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Partly Cloudy\n24C - 31C"
+                android:text="@string/mon"
                 android:textSize="20sp" />
 
             <TextView
@@ -102,27 +102,27 @@
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:layout_marginTop="10dp"
-                android:text="Showers\n24C - 20C" />
+                android:text="@string/tue" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:layout_marginTop="10dp"
-                android:text="Rain\n22C - 23C" />
+                android:text="@string/wed" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:layout_marginTop="10dp"
-                android:text="Scattered Showers\n22C - 27C" />
+                android:text="@string/thu" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Mostly Cloudy\n22C - 20C"
+                android:text="@string/fri"
                 android:textSize="20sp" />
 
             <TextView
@@ -130,35 +130,35 @@
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:layout_marginTop="10dp"
-                android:text="Partly Cloudy\n24C - 31C" />
+                android:text="@string/sat" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:layout_marginTop="10dp"
-                android:text="Thunderstorms\n25C - 28C" />
+                android:text="@string/sun" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:layout_marginTop="10dp"
-                android:text="Scattered Thunderstorms\n24C - 27C" />
+                android:text="@string/mon2" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:layout_marginTop="10dp"
-                android:text="Showers\n24C - 26C" />
+                android:text="@string/tue2" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:layout_marginTop="10dp"
-                android:text="Scattered Thunderstorms\n23C - 27C" />
+                android:text="@string/wed2" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
