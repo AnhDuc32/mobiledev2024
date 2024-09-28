@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -31,6 +33,7 @@ import java.io.OutputStream;
 
 public class WeatherActivity extends AppCompatActivity {
     private MediaPlayer mediaPlayer;
+    private Handler handler = new Handler(Looper.getMainLooper());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -140,6 +143,22 @@ public class WeatherActivity extends AppCompatActivity {
     }
 
     private void refreshContent() {
-        Toast.makeText(this, "Refreshing", Toast.LENGTH_SHORT).show();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(1000);
+
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(WeatherActivity.this, "some sample json here", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 }
