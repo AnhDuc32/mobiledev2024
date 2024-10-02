@@ -2,6 +2,7 @@ package vn.edu.usth.weather;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -30,6 +31,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.sql.Ref;
 
 public class WeatherActivity extends AppCompatActivity {
     private MediaPlayer mediaPlayer;
@@ -142,23 +144,24 @@ public class WeatherActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void refreshContent() {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(1000);
-
-                    handler.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            Toast.makeText(WeatherActivity.this, "some sample json here", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+    public class RefreshContentTask extends AsyncTask<Void, Void, String> {
+        @Override
+        protected String doInBackground(Void... voids) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
-        }).start();
+            return "some sample json here";
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            Toast.makeText(WeatherActivity.this, s, Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void refreshContent() {
+        new RefreshContentTask().execute();
     }
 }
